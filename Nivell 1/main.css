@@ -8,7 +8,8 @@ main > * {
 
 main {
     display: grid;
-   
+    max-width: 1200px;
+    margin:auto;
     grid-gap: 10px;
     grid-template-areas:
     "header"
@@ -72,6 +73,7 @@ section {
 header {
     grid-area: header;
     padding: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
