@@ -6,8 +6,13 @@ main > * {
   
 }
 
+:root {
+    --mobile-padding: 20px;
+  }
+
 main {
     display: grid;
+    padding: 20px;
     max-width: 1200px;
     margin:auto;
     grid-gap: 10px;
@@ -28,7 +33,7 @@ section {
 
 
 
-@media (min-width: 500px) {
+@media (min-width: 410px) {
     main {
         grid-template-areas:
         "header header header header"
@@ -78,7 +83,7 @@ header {
 }
 
 #headerTop {
-    background-color:rgb(41, 41, 54);
+    background-color:rgb(71, 71, 82);
     margin-bottom: 10px;
     display:flex;
     height: 60px;
@@ -177,3 +182,104 @@ footer > div {
     background-color: rgb(245, 178, 24);
     height:100%;
 }
+
+@media only screen and (max-width: 690px) {
+    section {
+      background-color: rgb(255, 230, 6);
+      grid-template-areas:
+      "contenido"
+      "derecha";
+    }
+
+    aside {
+        margin: .2em 0px;
+    }
+
+    aside > div {
+        background-color: yellow;
+    }
+
+    #aside2 {
+        margin-top:.25em;
+    }
+
+    #aside1, #aside2 {
+
+        height:.4em;
+    }
+ 
+  }
+
+
+  @media only screen and (max-width: 410px) {
+
+    section {
+        background-color: rgb(255, 230, 6);
+        grid-template-areas:
+        "contenido"
+        "derecha";
+      }
+
+    
+      #headerTop {
+        height:125px;
+        display:flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom:var(--mobile-padding);
+    }
+
+    #headerTop > div {
+        height: 1em;
+        flex: 1;
+      
+        align-items:flex-start;
+        margin: 0 0 var(--mobile-padding) 0;
+    }
+
+    #headerTop > div:last-of-type {
+        margin: 0;
+    }
+
+
+    #headerTop > .headerItem2 {
+        flex: 1;
+    }
+      
+    article {
+      background-color: rgb(34, 42, 50);
+      display:flex;
+      flex-direction:column;
+      padding:var(--mobile-padding);
+      margin-bottom:25px;
+      /* grid-template-areas:
+      "article1"
+      "article2"
+      "article3"
+      "article4"; */
+    }
+
+    article > div {
+       margin-bottom: .5em;
+        height: .65em;
+    }
+
+    article >div:last-of-type {
+        margin-bottom: 0;
+    }
+
+    aside {
+        padding: var(--mobile-padding);
+        background-color:rgb(255, 106, 0);
+    }
+
+    #aside1, #aside2 {
+        background-color:rgb(226, 152, 125);
+        height:.6em;
+    }
+
+    #aside1 {
+        margin-bottom: 20px;
+    }
+
+  }
