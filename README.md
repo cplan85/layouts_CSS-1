@@ -9,11 +9,11 @@ Demonstrates CSS that matches the mobile responsive wireframe layouts shown bell
 
 Nivell 1:
 
-- Laptop version
+- Desktop version
 - Tablet version
 - Mobile version
 
-Laptop version with max-width at 1290 px.
+Desktop version with max-width at 1290 px.
 
 ![Nivell 1 imatgen](./Pr%C3%A0ctica%20Flex%20versi%C3%B3%20excriptori.png)
 
