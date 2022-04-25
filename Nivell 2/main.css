@@ -1,0 +1,27 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box; 
+}
+
+html {
+    font-size: 62.5%; /* Now 10px = 1rem! */
+  }
+
+img {
+width:20rem;
+height: 100%;
+}
+
+footer {
+ background: rgba(216,215,215,255);
+ margin: 0px 1rem;
+}
+
+footer > div {
+    background: rgba(245,241,241,255);
+    text-align: center;
+    margin: 0px .5rem;
+    padding: .5rem;
+
+}
