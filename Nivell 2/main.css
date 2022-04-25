@@ -14,9 +14,33 @@ html {
 
 main {
  max-width: 1290px;
+ display: flex;
+ flex-direction: column;
+ margin: auto;
+ 
+
+}
+
+nav {
+    display: flex;
+    grid-area: nav;
+}
+
+nav > ul {
+    display: flex;
+    flex: 5;
+    width:60px;
+}
+
+nav > li ´{
+    list-style-type: none;
+}
+
+nav > img {
+height: 50px;
 }
 header {
-    height: 300px;
+    height: 20rem;
     background-image: url("./images/header.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -26,20 +50,37 @@ header {
     align-items: flex-end;
     justify-content: center;
     color: rgba(245,156,123,255);
+    grid-area: header;
+}
+
+section {
+    display: flex;
+    margin: 1rem;
 }
 
 #articlesContainer {
     background-color: var(--container-bg-color);
+    min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  grid-area: articlesContainer;
+  flex: 5;
  
 }
 
 article {
     background-color: rgba(245,241,241,255);
     margin: 1rem;
+    display: flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
   
 }
 article > img {
-width:60%;
+width:100%;
 height: 100%;
 }
 
@@ -50,11 +91,15 @@ article > h2 {
 
 aside {
     background: var(--container-bg-color);
+    grid-area: aside;
+    width: 30%;
+    flex: 1;
 }
 
 footer {
+ grid-area: footer;
  background: var(--container-bg-color);
- margin: 0px 1rem;
+ margin: 1rem;
 }
 
 footer > div {
@@ -64,3 +109,9 @@ footer > div {
     padding: .5rem;
 
 }
+
+
+
+
+
+
