@@ -13,6 +13,7 @@ html {
   }
 
 main {
+ font-family: Arial, Helvetica, sans-serif;
  max-width: 1290px;
  display: flex;
  flex-direction: column;
@@ -21,26 +22,28 @@ main {
 
 }
 
-i {
-margin: 0 2rem;
+svg {
+margin: 0 1rem;
 }
 
 nav {
     display: flex;
     grid-area: nav;
     justify-content: space-between;
+    max-width: 1290px;
     width: 100%;
     position: fixed;
     align-items: center;
-    color:red;
+    color:rgba(128,128,128,255);
+    margin: 0px 2rem;
 }
 
 nav > ul {
     display: flex;
-    flex: 4;
+    flex: 3;
     justify-content: space-between;
     list-style: none;
-    margin: 0 5rem;
+     margin: 0px .5rem;
   
 }
 
@@ -48,6 +51,7 @@ nav > ul {
     display: flex;
     flex: 1;
     margin: 0 1rem;
+    justify-content: center;
     
 }
 
@@ -61,7 +65,7 @@ nav > img {
 height: 5rem;
 }
 header {
-    height: 20rem;
+    height: 30rem;
     background-image: url("./images/header.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -72,7 +76,8 @@ header {
     justify-content: center;
     color: rgba(245,156,123,255);
     grid-area: header;
-    background-position: right 0px bottom 30%;
+    background-position: right 0px bottom 40%;
+    margin: 0px 1rem;
 }
 
 section {
@@ -81,6 +86,7 @@ section {
 }
 
 #articlesContainer {
+    margin-right: 1rem;
     background-color: var(--container-bg-color);
     min-height: 100%;
   display: flex;
@@ -95,7 +101,7 @@ article {
     background-color: rgba(245,241,241,255);
     margin: 1rem;
     display: flex; 
-    flex-basis: calc(50% - 40px);  
+    flex-basis: calc(50% - 2rem);  
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
@@ -106,16 +112,70 @@ width:100%;
 height: 100%;
 }
 
-article > h2 {
+article > div:first-of-type > h3 {
+    color: rgba(239,229,140,255);
+    margin: .5rem;
+    }
+
+    article > div:first-of-type {
+        width:100%;
+        height: 20rem;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+       
+        }
+
+     
+
+#culturaImg {
+
+    background-image: url("./images/sakura.jpg");
+
+}
+
+#gastroImg {
+  
+    background-image: url("./images/comida.jpg");
+ 
+}
+
+#turismoImg {
+
+    background-image: url("./images/fuji.jpg");
+
+}
+
+#nocheImg {
+    background-image: url("./images/noche.jpg");
+}
+
+article > div:last-of-type> h2 {
     color: white;
     background: rgba(240,128,128,255);
+    padding-top: 1rem;
     }
+
+.textsContainer {
+  display: flex;
+}
 
 aside {
     background: var(--container-bg-color);
     grid-area: aside;
-    width: 30%;
+    
     flex: 1;
+    padding: 3rem;
+    align-items: center;
+}
+
+aside > div {
+    text-align: center;
+}
+
+aside > div > h3 {
+    margin-bottom: 2rem;
 }
 
 footer {
