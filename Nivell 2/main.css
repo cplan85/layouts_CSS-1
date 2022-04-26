@@ -35,8 +35,11 @@ nav {
     position: fixed;
     align-items: center;
     color:rgba(128,128,128,255);
-    margin: 0px 2rem;
+    margin: 0px 1rem 0 1rem;
     padding-top: 2rem;
+    padding-left: 2rem;
+    background:#f9f9f9;
+    z-index:1;
 
 }
 
@@ -230,6 +233,18 @@ footer > div {
     margin: 0px 1rem;
     padding: .75rem;
 
+}
+
+@media only screen and (max-width: 690px) {
+    section {
+        display:flex;
+        flex-direction:column;
+    }
+
+    #articlesContainer {
+
+    width: 100%;
+    }
 }
 
 
