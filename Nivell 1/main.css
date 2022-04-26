@@ -1,3 +1,21 @@
+/* beginning settings to get 
+rid of default box settings. 
+
+1em = aprox 16 px
+don't use em, use rem
+rem doesn't inherit
+*/
+
+/* html {
+    font-size: 62.5%;
+} */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
 main > * {
   padding: 20px;
   font-size: 3em; 
@@ -171,7 +189,7 @@ aside > div:last-of-type {
 footer {
     grid-area: footer;
     padding:20px;
-    height: 20px;
+    height: 60px;
     background-color: rgb(0, 0, 0);
     margin-top:10px;
 
