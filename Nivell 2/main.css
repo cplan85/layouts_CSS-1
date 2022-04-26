@@ -30,12 +30,12 @@ nav {
     display: flex;
     grid-area: nav;
     justify-content: space-between;
-    max-width: 1290px;
-    width: 100%;
+    max-width: 1270px;
+    width: calc(100% - 2rem);
     position: fixed;
     align-items: center;
     color:rgba(128,128,128,255);
-    margin: 0px 1rem 0 1rem;
+    margin: 0px 2rem 0 1rem;
     padding-top: 2rem;
     padding-left: 2rem;
     background:#f9f9f9;
@@ -241,14 +241,49 @@ footer > div {
         flex-direction:column;
     }
 
+    aside {
+        margin-top: 1rem;
+    }
+
     #articlesContainer {
 
     width: 100%;
     }
 }
 
+@media only screen and (max-width: 410px) {
+
+article {
+    flex-basis: calc(100% - 2rem);
+}
+
+nav {
+    flex-direction:column;
+    position:relative;
+    padding: 1rem 0;
+   
+}
 
 
+nav > ul {
+    flex-direction: column;
+}
+
+nav > ul > li {
+    margin: 1rem 0;
+}
+
+.icons-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 5rem;
+}
+
+.icons-container > svg {
+    margin:1rem 0;
+}
+
+}
 
 
 
