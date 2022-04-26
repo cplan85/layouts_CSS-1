@@ -44,6 +44,10 @@ header {
     background-color: black;
 }
 
+nav {
+    display: flex;
+}
+
 section {
     background-color: rgb(75, 69, 69);
 }

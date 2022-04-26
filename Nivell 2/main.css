@@ -36,48 +36,77 @@ nav {
     align-items: center;
     color:rgba(128,128,128,255);
     margin: 0px 2rem;
+    padding-top: 2rem;
+
 }
 
 nav > ul {
     display: flex;
-    flex: 3;
+    flex: 4;
     justify-content: space-between;
     list-style: none;
      margin: 0px .5rem;
+    padding: 0px 2rem;
   
+}
+
+nav > ul > li:hover {
+    color:rgba(240,128,128,255);
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+
 }
 
 .icons-container {
     display: flex;
     flex: 1;
-    margin: 0 1rem;
+    margin: 0 .5rem;
     justify-content: center;
     
 }
 
-nav > li ´{
+.icons-container > svg:hover {
+    color:rgba(240,128,128,255);
+    cursor: pointer;
+}
+
+nav > li {
     list-style-type: none;
     box-sizing: border-box;
     margin: 5rem;
 }
-
 nav > img {
 height: 5rem;
 }
 header {
-    height: 30rem;
+    height: 25rem;
     background-image: url("./images/header.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    color: rgba(245,156,123,255);
+    color: rgb(252, 118, 28);
     grid-area: header;
-    background-position: right 0px bottom 40%;
+    background-position: right 0px bottom 45%;
     margin: 0px 1rem;
+}
+
+header > div {
+    opacity: 0.50;
+    width: 90%;
+    height: 40%;
+    background: rgb(199, 199, 199);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+header > div > h1 {
+    margin-bottom: 2rem;
+   
 }
 
 section {
@@ -97,6 +126,10 @@ section {
  
 }
 
+#articlesContainer > div:last-of-type {
+padding: 1rem;
+}
+
 article {
     background-color: rgba(245,241,241,255);
     margin: 1rem;
@@ -105,6 +138,7 @@ article {
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
+    color:rgba(170,169,169,255);
   
 }
 article > img {
@@ -154,11 +188,17 @@ article > div:first-of-type > h3 {
 article > div:last-of-type> h2 {
     color: white;
     background: rgba(240,128,128,255);
-    padding-top: 1rem;
+    padding: 1rem 0 .25rem .5rem;
     }
 
 .textsContainer {
+  margin-top: 1.5rem;
   display: flex;
+  color: rgba(116,115,115,255);
+}
+
+.textsContainer > p:first-of-type {
+    margin-right: 1rem;
 }
 
 aside {
@@ -181,14 +221,14 @@ aside > div > h3 {
 footer {
  grid-area: footer;
  background: var(--container-bg-color);
- margin: 1rem;
+ margin: 0 1rem 1rem 1rem;
 }
 
 footer > div {
     background: rgba(245,241,241,255);
     text-align: center;
-    margin: 0px .5rem;
-    padding: .5rem;
+    margin: 0px 1rem;
+    padding: .75rem;
 
 }
 
