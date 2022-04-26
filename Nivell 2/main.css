@@ -21,23 +21,44 @@ main {
 
 }
 
+i {
+margin: 0 2rem;
+}
+
 nav {
     display: flex;
     grid-area: nav;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    color:red;
 }
 
 nav > ul {
     display: flex;
-    flex: 5;
-    width:60px;
+    flex: 4;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 5rem;
+  
+}
+
+.icons-container {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    
 }
 
 nav > li ´{
     list-style-type: none;
+    box-sizing: border-box;
+    margin: 5rem;
 }
 
 nav > img {
-height: 50px;
+height: 5rem;
 }
 header {
     height: 20rem;
@@ -47,10 +68,11 @@ header {
     -o-background-size: cover;
     background-size: cover;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     color: rgba(245,156,123,255);
     grid-area: header;
+    background-position: right 0px bottom 30%;
 }
 
 section {
