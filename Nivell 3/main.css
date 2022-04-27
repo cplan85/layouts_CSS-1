@@ -68,6 +68,8 @@ nav > ul > li:hover {
     margin: 0 .5rem;
     justify-content: center;
     grid-area: icons-container;
+    display: grid;
+    grid-template-areas: "1 2";
     
 }
 
@@ -259,6 +261,14 @@ footer > div {
 
 }
 
+@media only screen and (max-width: 780px) {
+
+    nav > ul > li {
+        margin: 0 1rem;
+    }
+}
+
+
 @media only screen and (max-width: 690px) {
     section {
         grid-template-areas:
@@ -273,6 +283,21 @@ footer > div {
     #articlesContainer {
     width: 100%;
     }
+}
+
+@media only screen and (max-width: 675px) {
+
+    nav > ul > li > svg {
+        margin: 0 .25rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav > ul > li {
+        margin: 0 .2rem;
+    }
+
 }
 
 @media only screen and (max-width: 410px) {
@@ -306,7 +331,7 @@ nav {
 nav > ul {
     grid-template-areas:
     "nav-ul-li";
-    text-align:center;
+    text-align:left;
     
 }
 
@@ -317,11 +342,27 @@ nav > ul > li {
 .icons-container {
     width: 5rem;
     text-align: center;
+    grid-template-areas: 
+    "1"
+    "2";
+    justify-content: left;
 }
 
 .icons-container > svg {
     margin:1rem 0;
     display:block;
+}
+
+nav > ul > li {
+    margin: 1rem;
+}
+
+nav > ul > li > svg {
+    margin: 0 1rem;
+}
+
+header > div > h1 {
+    margin-top: 3rem;
 }
 
 }
