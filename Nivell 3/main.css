@@ -15,11 +15,7 @@ html {
 main {
  font-family: Arial, Helvetica, sans-serif;
  max-width: 1290px;
- display: flex;
- flex-direction: column;
  margin: auto;
- 
-
 }
 
 svg {
@@ -27,9 +23,8 @@ margin: 0 1rem;
 }
 
 nav {
-    display: flex;
+    display:grid;
     grid-area: nav;
-    justify-content: space-between;
     max-width: 1270px;
     width: calc(100% - 2rem);
     position: fixed;
@@ -42,35 +37,37 @@ nav {
     z-index:1;
     animation: moveDown 1s ease-in;
 
+    grid-template-areas:
+    "nav-img nav-ul nav-ul nav-ul nav-ul icons-container"
+
 }
 
 nav > ul {
-    display: flex;
-    flex: 4;
-    justify-content: space-between;
+    display: grid;
     list-style: none;
      margin: 0px .5rem;
-    padding: 0px 2rem;
+    padding: 0px 3rem;
+    grid-template-areas:
+    "nav-ul-li nav-ul-li nav-ul-li nav-ul-li nav-ul-li";
   
 }
 
-/* nav > ul > li {
-    animation: moveDown 1s ease-in;
-} */
+ nav > ul > li {
+    margin: 0 2rem;
+    display: inline-block;
+} 
 
 nav > ul > li:hover {
     color:rgba(240,128,128,255);
     cursor: pointer;
     transition: opacity 0.5s ease-in-out;
-    
-
 }
 
+
 .icons-container {
-    display: flex;
-    flex: 1;
     margin: 0 .5rem;
     justify-content: center;
+    grid-area: icons-container;
     
 }
 
@@ -79,13 +76,9 @@ nav > ul > li:hover {
     cursor: pointer;
 }
 
-nav > li {
-    list-style-type: none;
-    box-sizing: border-box;
-    margin: 5rem;
-}
 nav > img {
 height: 5rem;
+grid-area: nav-img;
 }
 header {
     height: 25rem;
@@ -94,8 +87,7 @@ header {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: flex;
-    align-items: flex-end;
+    position: relative;
     justify-content: center;
     color: rgb(252, 118, 28);
     grid-area: header;
@@ -108,66 +100,88 @@ header > div {
     width: 90%;
     height: 40%;
     background: rgb(199, 199, 199);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+  
 }
 
 header > div > h1 {
-    margin-bottom: 2rem;
+    margin-top: 4rem;
     animation: moveRight 1s ease-in;
 }
 
 section {
-    display: flex;
     margin: 1rem;
+    grid-area: section;
+    display: grid;
+    grid-template-areas:
+    "articlesContainer articlesContainer articlesContainer articlesContainer aside";
 }
 
 #articlesContainer {
     margin-right: 1rem;
     background-color: var(--container-bg-color);
     min-height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  grid-area: articlesContainer;
-  flex: 5;
+    grid-area: articlesContainer;
+    display:grid;
+    grid-template-areas:
+    "article1 article2"
+    "article3 article4"
+    "article-footer article-footer"
  
 }
 
+#article1 {
+    grid-area: article1;
+} 
+
+#article2 {
+    grid-area: article2;
+} 
+
+#article3 {
+    grid-area: article3;
+} 
+
+#article4 {
+    grid-area: article4;
+} 
 #articlesContainer > div:last-of-type {
 padding: 1rem;
+grid-area: article-footer;
 }
 
 article {
     background-color: rgba(245,241,241,255);
     margin: 1rem;
-    display: flex; 
-    flex-basis: calc(50% - 2rem);  
+    
     justify-content: center;
-    flex-direction: column;
     padding: 1rem;
     color:rgba(170,169,169,255);
-  
 }
+
 article > img {
-width:100%;
-height: 100%;
+    width:100%;
+    height: 100%;
 }
 
 article > div:first-of-type > h3 {
     color: rgba(239,229,140,255);
     margin: .5rem;
     animation: moveRight 1s ease-in;
+    position: absolute;
+    bottom: .25rem;
     }
 
     article > div:first-of-type {
         width:100%;
         height: 20rem;
         background-size: cover;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
+        position: relative;
        
         }
 
@@ -203,10 +217,14 @@ article > div:last-of-type> h2 {
 
 .textsContainer {
   margin-top: 1.5rem;
-  display: flex;
+  display: grid;
   color: rgba(116,115,115,255);
   animation: moveUp 1.5s ease-in;
+  grid-template-areas:
+    "1 2";
+  
 }
+
 
 .textsContainer > p:first-of-type {
     margin-right: 1rem;
@@ -215,8 +233,6 @@ article > div:last-of-type> h2 {
 aside {
     background: var(--container-bg-color);
     grid-area: aside;
-    
-    flex: 1;
     padding: 3rem;
     align-items: center;
 }
@@ -245,8 +261,9 @@ footer > div {
 
 @media only screen and (max-width: 690px) {
     section {
-        display:flex;
-        flex-direction:column;
+        grid-template-areas:
+        "articlesContainer" 
+        "aside";
     }
 
     aside {
@@ -254,27 +271,43 @@ footer > div {
     }
 
     #articlesContainer {
-
     width: 100%;
     }
 }
 
 @media only screen and (max-width: 410px) {
 
-article {
-    flex-basis: calc(100% - 2rem);
-}
+    #articlesContainer {
+        grid-template-areas:
+    "article1"
+    "article2"
+    "article3"
+    "article4"
+    "article-footer"
+    }
+
+
 
 nav {
-    flex-direction:column;
     position:relative;
     padding: 1rem 0;
+    place-items: center;
+    grid-template-areas:
+    "nav-img"
+     "nav-ul" 
+     "nav-ul"
+     "nav-ul" 
+     "nav-ul" 
+     "icons-container"
    
 }
 
 
 nav > ul {
-    flex-direction: column;
+    grid-template-areas:
+    "nav-ul-li";
+    text-align:center;
+    
 }
 
 nav > ul > li {
@@ -282,13 +315,13 @@ nav > ul > li {
 }
 
 .icons-container {
-    flex-direction: column;
-    align-items: flex-start;
     width: 5rem;
+    text-align: center;
 }
 
 .icons-container > svg {
     margin:1rem 0;
+    display:block;
 }
 
 }
