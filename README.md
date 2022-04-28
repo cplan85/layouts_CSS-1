@@ -25,4 +25,18 @@ Mobile version with max-width at 410px
 
 ![Nivell 1 imatgen - level 2](./Captura_de_pantalla_2021-02-01_a_las_18.06.04.png)
 
-Happy Coding!
+Nivell 2:
+
+![Website Example](./Nivell%202/WebsiteExample.png)
+
+Mock-up of Japan Tourism website created with flexbox.
+
+- contains roll-over effects.
+- media queries maintained from previous Nivell 1 exercise.
+- icons are from font-awesome.
+- semi-transparent text at header.
+
+Nivell 3:
+
+- keyframe animations added.
+- website structure completely made with css grid.
