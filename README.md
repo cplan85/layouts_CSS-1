@@ -29,8 +29,9 @@ Nivell 2:
 
 ![Website Example](./Nivell%202/WebsiteExample.png)
 
-Mock-up of Japan Tourism website created with flexbox.
+Japan Tourism website created for both Nivell 2 and 3.
 
+- website structure completely made with flexbox.
 - contains roll-over effects.
 - media queries maintained from previous Nivell 1 exercise.
 - icons are from font-awesome.
